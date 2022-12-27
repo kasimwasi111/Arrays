@@ -18,7 +18,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     private int score = 0;
     private int totalBricks = 30;
     private Timer timer;
-    private int delay = 6;
+    private int delay = 5;
     private int playerX = 310;
     private int ballposX = 120;
     private int ballposY = 350;
@@ -72,10 +72,10 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
             ballYdir = 0;
             g.setColor(Color.green);
             g.setFont(new Font("serif", Font.BOLD, 50));
-            g.drawString("You Won....!", 250, 300);
+            g.drawString("You Won....!!  Score :" + score, 180, 300);
             g.setColor(Color.WHITE);
             g.setFont(new Font("serif", Font.BOLD, 25));
-            g.drawString("Press Enter to Restart", 230, 350);
+            g.drawString("Press Enter to Restart", 250, 350);
         }
 
         if (ballposY > 570) {
@@ -84,10 +84,10 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
             ballYdir = 0;
             g.setColor(Color.RED);
             g.setFont(new Font("serif", Font.BOLD, 35));
-            g.drawString("Game Over", 230, 300);
+            g.drawString("Game Over....!!  Score :" + score, 180, 300);
             g.setColor(Color.WHITE);
             g.setFont(new Font("serif", Font.BOLD, 25));
-            g.drawString("Press Enter to Restart", 230, 350);
+            g.drawString("Press Enter to Restart", 250, 350);
 
         }
 
